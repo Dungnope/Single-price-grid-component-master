@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright_Yellow: hsl(71, 73%, 54%);
+    --Light_Gray: hsl(204, 43%, 93%);
+    --Grayish_Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--Light_Gray);
+    min-height: 100vh;
+    display: flex;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 72px 32px;
+}
+
+.app__box {
+    min-width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 8px 20px 20px -6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.app__intro {
+    background-color: white;
+    padding: 32px 25px 27px 25px;
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+}
+
+.app__intro h3 {
+    color: var(--Cyan);
+    font-weight: 700;
+}
+
+.app__intro--details {
+    font-size: 16px;
+    color: var(--Bright_Yellow);
+    font-weight: 700;
+    margin: 22px 0 18px 0;
+}
+
+.app__intro--guides {
+    font-size: 16px;
+    color: var(--Grayish_Blue);
+    line-height: 1.4rem;
+}
+
+.app__price {
+    background-color: #2bb3b1;
+    padding: 32px 25px 25px;
+}
+
+.app__price h3 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.app__price--details {
+    color: hsla(203, 44%, 93%, 0.5);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+}
+
+.app__price--details span {
+    font-size: 36px;
+    font-weight: 700;
+    margin-right: 14px;
+    color: white;
+}
+
+.app__price--guides {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.app__price button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Karla', sans-serif;
+    color: white;
+    background-color: var(--Bright_Yellow);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 8px 10px 10px -6px;
+}
+
+.app__price button:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 12px 14px 12px -4px;
+    background-color: hsla(71, 97%, 59%, 0.89);
+    cursor: pointer;
+
+}
+
+.app__information {
+    background-color: #4abebd;
+    padding: 32px 100px 25px 25px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.app__information h3 {
+    color: white;
+    margin-bottom: 24px;
+
+}
+
+.app__information--guides {
+    color: var(--Light_Gray);
+    font-size: 16px;
+    line-height: 1.6rem;
+}
+
+/* responsive */
+@media (min-width: 600px) and (max-width: 1199px) {
+
+    main {
+        display: grid;
+    }
+
+    .app__box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .app__intro {
+        grid-column: 1 / span 2;
+        padding: 45px 40px 48px 40px;
+    }
+
+    .app__price {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom-left-radius: 6px;
+    }
+
+    .app__information {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    .app__information h3 {
+        font-size: 48px;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+
+    main {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .app__box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column: 2 / span 2;
+    }
+
+    .app__intro {
+        grid-column: 1 / span 2;
+        padding: 45px 40px 48px 40px;
+    }
+
+    .app__price {
+        border-bottom-left-radius: 6px;
+        grid-column: 1 / span 1;
+        padding: 40px;
+    }
+
+    .app__information {
+        padding: 40px 40px 40px 40px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 6px;
+        grid-column: 2 / span 2;
+
+    }
+
+    .app__information--guides {
+        padding-right: 68px;
+        line-height: 1.4rem;
+    }
+}
